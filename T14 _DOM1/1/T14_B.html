@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+-
+<title>T14_B</title>
+<style>
+body {
+background-color: #327dee;
+color: #fff;
+font-size: 18px;
+}
+.classy1{
+            background-color: red;
+    }
+.classy2{
+            background-color: blue;
+    }
+.class3{
+            background-color: 327dee;
+        }
+.class4{
+            background-color: red;
+        }
+</style>
+<script >
+     function myFunction() {
+            let change1 = document.querySelectorAll("p.class1");
+            change1[0].classList.toggle("classy1");
+        }
+        function myFunction1() {
+            let change2 = document.querySelector('#id');
+            change2.classList.toggle("classy2")
+            if (change2.innerHTML=="Akapit bez klasy z indentyfikatorem.") {
+                change2.innerHTML="Świetnie!"
+            } 
+            else {
+                change2.innerHTML="Akapit bez klasy z indentyfikatorem."
+            }
+        }
+        function myFunction2() {
+            let change3 = document.querySelectorAll('ul li.class3');
+            change3[0].classList.toggle("class4");
+            change3[1].classList.toggle("class4");
+        }
+
+
+</script>
+</head>
+<body>
+<h2 class="class1">Nagłówek z klasą "class1".</h2> 
+
+<h3 class="class2">Nagłówek z klasą ="class2".</h3>
+
+ <p class="class1">Akapit z klasą ="class1".</p>
+
+<p class="class1">Drugi akapit z klasa "class1".</p> 
+
+<p id="id">Akapit bez klasy z identyfikatorem</p> 
+<ul>
+<li >punkt pierwszy</li>
+<li >punkt drugi</li>
+<li class="class3">punkt trzeci</li> 
+<li class="class3">punkt czwarty</li>
+</ul> 
+
+<p><button onclick="myFunction ()">Zmień kolor tła pierwszego akapitu z klasą="class1"</button></p> 
+<p><button onclick="myFunction1()">Zmień kolor tła i tekst akapitu z identyfikatorem</button></p> 
+<p><button onclick="myFunction2()">Zmień tło punktów listy punktowanej</button></p> 
+
+</body>
+</html>

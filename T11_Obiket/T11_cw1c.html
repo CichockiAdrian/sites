@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lekcja 11 cw 1c</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const o = document.getElementById("output")
+        class person{
+            constructor(x,y,z,b){
+            this.fname= x,
+            this.lname= y,
+            this.height= z,
+            this.weight= b,
+            this.hello= function(){
+                alert(`Witaj ${this.fname} ${this.lname}`)
+                return (`Witaj ${this.fname} ${this.lname}`)
+
+            }
+            this.info= function(){
+                console.log(`Imię i nazwisko: ${this.fname} ${this.lname}`)
+                console.log(`Wzrost: ${this.height}`)
+                console.log(`Waga ${this.weight}`)
+                o.innerHTML += `Imię i nazwisko: ${this.fname} ${this.lname}<br>`
+                o.innerHTML += `Wzrost: ${this.height}<br>`
+                o.innerHTML += `Waga ${this.weight}<br>`
+            }
+        }
+    }
+        const p = new person(prompt("Podaj imię:"), prompt("Podaj nazwisko:"), prompt("Podaj wzrost:"), prompt("Podaj wagę:"))
+        const r = new person(prompt("Podaj imię:"), prompt("Podaj nazwisko:"), prompt("Podaj wzrost:"), prompt("Podaj wagę:"))
+        const s = new person(prompt("Podaj imię:"), prompt("Podaj nazwisko:"), prompt("Podaj wzrost:"), prompt("Podaj wagę:"))
+        o.innerHTML+=`Osoba 1 <br>`
+        console.log(p)
+        p.hello()
+        p.info()
+        o.innerHTML+=`Osoba 2 <br>`
+        console.log(r)
+        r.hello()
+        r.info()
+        o.innerHTML+=`Osoba 3 <br>`
+        console.log(s)
+        s.hello()
+        s.info()
+    </script>
+    
+</body>
+</html>

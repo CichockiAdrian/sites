@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T17 zad3</title>
+    <style>
+        body{
+            background-color: rgb(64, 188, 19);
+            display: flex;
+            justify-content: center;
+        }
+    div{
+        margin-top: 10%;
+        font-size: 110px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        🎈
+    </div>
+    <script>
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+
+        let balloon = document.querySelector("div");
+        let fontSize = 100;
+        document.addEventListener("keydown", changeFontSize);
+    
+    function changeFontSize(event){
+        if(event.key === "ArrowUp"){
+            fontSize += fontSize/10;
+        }
+        if(event.key === "ArrowDown"){
+            fontSize -= fontSize/10;
+        }
+        balloon.style.fontSize = `${fontSize}px`;
+        if(fontSize > 500){
+            balloon.textContent = "💥";
+            document.removeEventListener("keydown", changeFontSize);
+        }
+        
+    }
+    
+});
+</script>
+</body>
+</html>

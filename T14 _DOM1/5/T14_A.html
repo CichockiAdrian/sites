@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_A</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px black solid;
+            margin: 5px;
+            background-color: purple;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="square"><a href="">wybor1</a></div>
+        <div class="square"><a href="">wybor2</a></div>
+        <div class="square"><a href="">wybor3</a></div>
+    </div>
+    <button onclick="toggleLayout()">Polozenie</button>
+    <button onclick="toggleColor()">Kolor</button>
+    <script>
+        let squares = document.getElementsByClassName('square')
+        let container = document.getElementById("container")
+        function toggleColor() {
+            for (const square of squares) {
+                if (square.style.backgroundColor!='purple') {
+                square.style.backgroundColor='purple'
+                } else {
+                square.style.backgroundColor='pink'
+                }
+            }
+        }
+        function toggleLayout() {
+            if (container.style.flexDirection!='column') {
+                container.style.flexDirection='column'
+            } else {
+                container.style.flexDirection='row'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T17 zad2</title>
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            margin-top: 10%;
+        }
+        .box{
+            background-color: #f1c40f;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            height: 255px;
+            width: 255px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+        <div class="box"></div>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+        let paragraph = document.querySelector("p");
+        let box = document.querySelector(".box");
+        box.addEventListener("mousemove", (e)=>{
+        const x = e.offsetX;
+        const y = e.offsetY;
+        const b = Math.ceil((x+y)/2);
+        paragraph.textContent = `X: ${x} Y: ${y}`
+        box.textContent = `R: ${x} G: ${y} B: ${b}`;
+        document.body.style.backgroundColor = 'rgb(' + x + ',' + y + ',' + b + ')';
+    })
+});
+</script>
+</body>
+</html>

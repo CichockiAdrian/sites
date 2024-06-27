@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T15 zad4</title>
+    <style>
+        body{
+            background-color: black;
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            margin: auto;
+            margin-left: 20%;
+            position: absolute;
+            
+            
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+        button{
+            background-color: #e91e63;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <button onclick=lightSwitch()>Włącz światło</button>
+    <h1>Trochę ciemno...</h1>
+    <div class="container">
+    <img src="dark.jpg" alt="Dark room">
+    </div>
+    <script>
+        function lightSwitch(){
+            if(document.querySelector("body").style.backgroundColor=="black"){
+            document.querySelector("img").setAttribute("src","light.jpg");
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("h1").textContent = "JASNO, piekło dla programisty!";
+            document.querySelector("button").textContent = "Wyłącz światło";
+            }
+            else{
+            document.querySelector("img").setAttribute("src","dark.jpg");
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("h1").textContent = "Trochę ciemno...";
+            document.querySelector("button").textContent = "Włącz światło";
+            }
+        }
+    </script>
+</body>
+</html>    
+

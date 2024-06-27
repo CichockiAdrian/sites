@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lekcja 11 cw 2c</title>
+</head>
+<body>
+<p id="output"></p>
+<script>
+    const o = document.getElementById("output")
+        let a = Number(prompt('liczba a'))
+        let b = Number(prompt('liczba b'))
+        class trianglus {
+            constructor(a, b) {
+                this.a = a
+            this.b = b
+            this.p = function () {
+                return Math.sqrt(a * a + b * b)
+            }
+            this.re = function () {
+                return a * b / 2
+            }
+            this.o = function () {
+                return a + b + Math.sqrt(a * a + b * b)
+            }
+        }
+        }
+        const t = new trianglus(a, b)
+        console.log(`przeciwprostokatna  = ${t.p()}`)
+        console.log(`pole = ${t.re()}`)
+        console.log(`obwod = ${t.o()}`)
+        o.innerHTML = `Przeciwprostokątna: ${t.p()}<br>`
+        o.innerHTML +=`Pole: ${t.re()}<br>`
+        o.innerHTML +=`Obwód: ${t.o()}<br>`
+    </script>
+</body>
+
+</html>

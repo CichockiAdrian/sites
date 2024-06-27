@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T18 zad1</title>
+    <style>
+        body{
+            margin:3%;
+            border: none;
+  		    color: black;
+  		    padding: 12px 24px;
+  		    text-align: center;
+  		    text-decoration: none;
+  		    display: block;
+  		    font-size: 16px;
+  		    margin: 4px 2px;
+        }
+        #btn{
+            margin: 2%;
+            background-color: #4CAF50;
+  		    border: none;
+  		    color: white;
+  		    padding: 12px 24px;
+  		    text-align: center;
+  		    text-decoration: none;
+  		    display: inline-block;
+  		    font-size: 16px;
+  		    margin: 4px 2px;
+  		    cursor: pointer;
+  		    border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Kafelkowanie łazienki</h1>
+
+    <p> powierzchnia w m2:
+        <input type="number" id="m">   <br>
+
+
+        <input type="radio" name="a" value="70"><label> kafelki 20 x 20 cm</label><br>
+        <input type="radio" name="a" value="80"><label> kafelki 25 x 12 cm</label><br>
+
+        <input type="submit" value="PRZELICZ" id="btn"> <br>
+        <p id="w"></p>
+
+    <p id="res"></p>
+    </p>
+    <script>
+        let radio = document.querySelectorAll("input[type='radio']")
+        let m = document.querySelector("#m")
+        let w = document.querySelector("#w")
+        let btn = document.querySelector("#btn")
+        let vR
+
+        btn.addEventListener("click",licz)
+        function licz(){
+        for(let i = 0; i < radio.length;i++){
+                if(radio[i].checked){
+                    vR=radio[i].value
+                }
+        }
+        w.textContent=`Koszt kafelkowania:${vR*m.value}zł`
+
+}
+    </script>
+</body>
+</html>

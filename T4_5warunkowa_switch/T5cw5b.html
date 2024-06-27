@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 5 zad5b</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Podaj liczbę:");
+        let num1 = parseFloat(a);
+        var x = prompt("Podaj znak działania:");
+        var b = prompt("Podaj drugą liczbę:");
+        let num2 = parseFloat(b);
+        
+        switch(x){
+            case "+":
+            alert(a+" + "+b+" = "+(num1+num2))
+            break;
+            case "*":
+            alert(a+" * "+b+" = "+(num1*num2))
+            break;
+            case "/":
+            alert(a+" / "+b+" = "+(num1/num2))
+            break
+            case "-":
+            alert(a+" - "+b+" = "+(num1-num2))
+            break;
+        }
+    </script>
+</body>
+</html>

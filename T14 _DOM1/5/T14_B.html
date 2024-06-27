@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_A</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            border: 1px black solid;
+            margin: 5px;
+            
+        }
+        .container {
+            width: 100%;
+            height: 250px;
+        }
+        .poz1{
+        display: flex;
+        flex-direction: row;
+        }
+       .poz2{
+        display: flex;
+        flex-direction: column;
+        }
+        .col1{
+            background-color: purple;
+        }
+        .col2{
+        background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container poz2">
+        <div class="square col1"><a href="">wybor1</a></div>
+        <div class="square col1"><a href="">wybor2</a></div>
+        <div class="square col1"><a href="">wybor3</a></div>
+    </div>
+    <button onclick="changePossition()">Formatuj Pozycje</button>
+    <button onclick="changeColor()">Formatuj Kolor</button>
+    <script>
+        function changePossition() {
+            let container = document.querySelectorAll(".container")
+            container. forEach (element =>{
+            element.classList.toggle("poz1")
+            element.classList.toggle("poz2")})
+        }
+        function changeColor() {
+            let squares = document.querySelectorAll(".square")
+            squares.forEach (element =>{
+                element.classList.toggle("col1")
+                element.classList.toggle("col2")})
+            }
+        
+    </script>
+</body>
+</html>

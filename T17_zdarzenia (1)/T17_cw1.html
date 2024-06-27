@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T17 zad1</title>
+    <style>
+        body{
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #mainImg, #minImg {
+        display: flex;
+        justify-content: center;
+        }
+
+        #mainImg {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin:5%;
+        }
+
+        .main {
+         margin-top: 5%;
+         height: 400px;
+         width: 600px;
+        }
+
+        #minImg img {
+         height: 100px;
+         width: 200px;
+         margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> My gallery</h1>
+    <div id="mainImg">
+        <img class="main" src="car1.jpg" alt="samochód">
+    </div>
+    <div id="minImg">
+        <img src="car1.jpg" alt="samochód" class="car1">
+        <img src="car2.jpg" alt="samochód" class="car2">
+        <img src="car3.jpg" alt="samochód" class="car3">
+        <img src="car4.jpg" alt="samochód" class="car4">
+        <img src="car5.jpg" alt="samochód" class="car5">
+    </div>
+
+    <script>
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+   
+    
+    const main = document.querySelector(".main");
+    const car1 = document.querySelector(".car1");
+    const car2 = document.querySelector(".car2");
+    const car3 = document.querySelector(".car3");
+    const car4 = document.querySelector(".car4");
+    const car5 = document.querySelector(".car5");
+    const cars = document.querySelectorAll("img");
+    car1.addEventListener("mouseover", change, false);
+    car1.addEventListener("mouseout", remove);
+    car2.addEventListener("mouseover", change2);
+    car2.addEventListener("mouseout", remove);
+    car3.addEventListener("mouseover", change3);
+    car3.addEventListener("mouseout", remove);
+    car4.addEventListener("mouseover", change4);
+    car4.addEventListener("mouseout", remove);
+    car5.addEventListener("mouseover", change5);
+    car5.addEventListener("mouseout", remove);
+    
+    function remove(){
+        this.style.borderBottom = "none";
+        }
+
+        function change(){
+            main.setAttribute("src","car1.jpg")
+            car1.style.borderBottom = "5px solid green"
+            
+        }
+        function change2(){
+            main.setAttribute("src","car2.jpg")
+            car2.style.borderBottom = "5px solid green"
+        }
+        function change3(){
+            main.setAttribute("src","car5.jpg")
+            car3.style.borderBottom = "5px solid green"
+        }
+        function change4(){
+            main.setAttribute("src","car4.jpg")
+            car4.style.borderBottom = "5px solid green"
+            
+        }
+        function change5(){
+            main.setAttribute("src","car5.jpg")
+            car5.style.borderBottom = "5px solid green"
+            
+        }
+    
+
+
+    });
+   
+    </script>
+</body>
+</html>

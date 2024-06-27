@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Urody</title>
+</head>
+<body>
+    <h1>Zabiegi kosmetyczne</h1>
+    <form>
+        <label for="piling">Piling</label>
+        <input type="checkbox" name="piling" id="piling"><br>
+    
+        <label for="maska">Maska</label>
+        <input type="checkbox" name="maska" id="maska"><br>
+    
+        <label for="masaz">Masaż</label>
+        <input type="checkbox" name="masaz" id="masaz"><br>
+    
+        <label for="brwi">Regulacja brwi</label>
+        <input type="checkbox" name="brwi" id="brwi"><br>
+    
+        <button type="button" id="oblicz">Oblicz cenę</button>
+    </form>
+    
+    <div id="wynik"></div>
+    
+    <script>
+  
+        document.querySelector("#oblicz").addEventListener("click", obliczCene);
+        function obliczCene(){
+            document.querySelector("#wynik").innerHTML = ``
+            let suma = 0;
+    
+            if (document.querySelector("#piling").checked) {
+                suma += 45;
+            }
+    
+            if (document.querySelector("#maska").checked) {
+                suma += 30;
+            }
+    
+            if (document.querySelector("#masaz").checked) {
+                suma += 20;
+            }
+    
+            if (document.querySelector("#brwi").checked) {
+                suma += 5;
+            }
+    
+            document.querySelector("#wynik").innerHTML = `Cena zabiegów: ${suma}`;
+        }
+    
+    </script>
+    </body>
+    </html>

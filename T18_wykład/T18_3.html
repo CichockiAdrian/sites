@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T18 zad 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        form {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            font-size: 16px;
+            margin: 15px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        select {
+            font-size: 16px;
+            margin: 15px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        #container {
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="a">Pierwsza liczba:</label>
+        <input type="number" id="a" name="a">
+        <label for="b">Druga:</label>
+        <input type="number" id="b" name="b">
+        <label for="char">Działanie:</label>
+        <select id="char" name="char">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <button type="button" id="b1">Oblicz!</button>
+        <div id="div"></div>
+    </form>
+
+    <script>
+        let b1 = document.querySelector("#b1");
+        b1.addEventListener("click", cal);
+        let d = document.querySelector("#div");
+        let e = document.createElement("h2");
+        e.textContent = ``;
+
+        function cal() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let op = document.getElementById("char").value;
+            switch (op) {
+                case "1":
+                    e.textContent = `${a} + ${b} = ${a + b}`;
+                    break;
+                case "2":
+                    e.textContent = `${a} - ${b} = ${a - b}`;
+                    break;
+                case "3":
+                    e.textContent = `${a} * ${b} = ${a * b}`;
+                    break;
+                case "4":
+                    e.textContent = `${a} / ${b} = ${a / b}`;
+                    break;
+                 
+    }
+   d.appendChild(e) 
+    }
+    </script>
+    
+</body>
+</html>               
+                   

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t14_2B</title>
+    <style>
+          body{
+        background-color: #327dee;
+        color: #fff;
+        font-size: 18px;
+        }
+        .hide{
+            visibility: hidden;
+            height: 0;
+        }
+        .show{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">Jeden</a></li>
+        <li><a href="">Dwa</a></li>
+        <li><a href="">Trzy</a></li>
+        <li><a href="">Cztery</a></li>
+        <li><a href="">Pięć</a></li>
+    </ul>
+    <button onclick="myFunction()">Ukryj menu</button>
+    <button onclick="myFunction1()">Pokaz menu</button>
+    <script>
+        let hidden = document.querySelectorAll("li");
+        function myFunction() {
+            for (let i of hidden){
+            i.classList.remove("show");
+            i.classList.add("hide");
+            }
+        }
+        function myFunction1() {
+            for (let i of hidden){
+            i.classList.remove("hide");
+            i.classList.add("show");
+            }
+        }
+    </script>
+</body>
+</html>

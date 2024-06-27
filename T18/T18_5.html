@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>T18 zad 5</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	table {
+		margin: 0 auto;
+		text-align: center;
+		width: 40%;
+	}
+
+	th, td {
+		padding: 5px;
+		
+	}
+
+	input[type="number"] {
+		width: 50px;
+	}
+
+	input[type="text"] {
+		width: 100px;
+	}
+
+	#selected-shape {
+		margin-top: 30px;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	#selected-shape span {
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	#selected-color {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	#selected-color button {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin: 10px;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+    <h1>Oferta</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Kształty</th>
+                <th>Kolory</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. Miś</td>
+                <td>1. Czerwony</td>
+            </tr>
+            <tr>
+                <td>2. Żabka</td>
+                <td>2. Niebieski</td>
+            </tr>
+            <tr>
+                <td>3. Serce</td>
+                <td>3. Żółty</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>4. Inny</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <label for="ksztalt">Wybierz numer kształtu:</label>
+    <select id="ksztalt" name="ksztalt">
+        <option value="1">Miś</option>
+        <option value="2">Żabka</option>
+        <option value="3">Serce</option>
+    </select>
+    <br><br>
+    <label for="r">R:</label>
+    <input type="number" id="r" name="r" min="0" max="255">
+    <label for="g">G:</label>
+    <input type="number" id="g" name="g" min="0" max="255">
+    <label for="b">B:</label>
+    <input type="number" id="b" name="b" min="0" max="255">
+    <br><br>
+    <button id="zamow">Zamów</button>
+    <br><br>
+    <p>Wybrany kształt<br> <span id="wybrany-ksztalt"></span></p>
+    <button id="wybrany-kolor">Wybrany kolor</button>
+
+    <script>
+        const ksztalt = document.querySelector('#ksztalt');
+        const r = document.querySelector('#r');
+        const g = document.querySelector('#g');
+        const b = document.querySelector('#b');
+        const zamow = document.querySelector('#zamow');
+        const wybranyKsztalt = document.querySelector('#wybrany-ksztalt');
+        const wybranyKolor = document.querySelector('#wybrany-kolor');
+
+        zamow.addEventListener('click', function() {
+            let wybranyKsztaltTekst = '';
+            switch (ksztalt.value) {
+                case '1':
+                    wybranyKsztaltTekst = 'Miś';
+                    break;
+                case '2':
+                    wybranyKsztaltTekst = 'Żabka';
+                    break;
+                case '3':
+                    wybranyKsztaltTekst = 'Serce';
+                    break;
+            }
+            wybranyKsztalt.textContent = `Zamówiłeś zelka: ${wybranyKsztaltTekst}`;
+            wybranyKolor.style.backgroundColor = `rgb(${r.value}, ${g.value}, ${b.value})`;
+        });
+        // wybranyKolor.addEventListener('click', function() {
+        //     wybranyKolor.style.backgroundColor = `rgb(${r.value}, ${g.value}, ${b.value})`;
+        // });
+    </script>
+</body>
+</html>

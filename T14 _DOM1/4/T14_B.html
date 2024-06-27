@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_A</title>
+</head>
+<style>
+    .prparagraf {
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-family: Arial;
+    }
+    .nprparagraf {
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-family: Arial;
+    }
+    .par {
+        background-color: gray;
+        color: red;
+        text-align: right;
+        font-family: "New Year's Times";
+    }
+    .npar {
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        font-family: "OCR A Std Black";
+    }
+    .topp{
+        background-color: slateblue;
+        color: blue;
+        text-align: center;
+        font-family: "OCR A Std ";
+    }
+    .os{
+        background-color: yelow;
+        color: red;
+        text-align: right;
+        font-family: "OCR A Std ";
+
+
+    }
+</style>
+<body>
+    <p class="prparagraf top" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <p class="nprparagraf top" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <p class="prparagraf top" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <p class="nprparagraf " >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <p class="prparagraf" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <p class="nprparagraf ost" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem fringilla fringilla.</p>
+    <button onclick="changeFormat()">Formatuj parzyste</button>
+    <button onclick="changeFormat1()">Formatuj nieparzyste</button>
+    <button onclick="changeFormat2()">Formatuj 3 pierwsze</button>
+    <button onclick="changeFormat3()">Formatuj ostatni akapit</button>
+
+
+<script>
+    function changeFormat(){
+        let x = document.querySelectorAll(".prparagraf")
+        x.forEach(element => {
+            element.classList.toggle("par")
+        });
+    }
+    function changeFormat1(){
+        let y = document.querySelectorAll(".nprparagraf")
+        y.forEach(element => {
+            element.classList.toggle("npar")
+        });
+    }
+    function changeFormat2(){
+        let z = document.querySelectorAll(".top")
+        z.forEach(element => {
+            element.classList.toggle("topp")
+        });
+    }
+    function changeFormat3(){
+        let v = document.querySelectorAll(".ost")
+        v.forEach(element => {
+            element.classList.toggle("os")
+        });
+    }
+
+</script>
+</body>
+</html>

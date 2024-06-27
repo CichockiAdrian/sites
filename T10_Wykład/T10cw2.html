@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const Osoba ={
+        imie: "Jan",
+        nazwisko: "Nowak",
+        data_urodzenia: "19.08.2004"
+    }
+    Osoba.wzrost = 180
+    Osoba.kolor_oczu = "Niebieski"
+    Osoba.data_urodzenia = "19.08.2006"
+    document.querySelector("body").innerHTML = (`${Osoba.imie}, ${Osoba.nazwisko}, ${Osoba.data_urodzenia}, ${Osoba.wzrost}, ${Osoba.kolor_oczu}`)
+    console.log(Osoba)
+</script>
+</html>

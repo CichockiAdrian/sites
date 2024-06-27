@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T18 zad 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        form {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            font-size: 16px;
+            margin: 15px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        button {
+  		background-color: #4CAF50;
+  		border: none;
+  		color: white;
+  		padding: 12px 24px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 16px;
+  		margin: 4px 2px;
+  		cursor: pointer;
+  		border-radius: 4px;
+        
+		}
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        #container {
+            margin: 20px;
+        }
+
+        
+        </style>
+</head>
+<body>
+    <form>
+        <label for="a">Pierwsza liczba:</label>
+        <input type="number" id="a" name="a">
+        <label for="b">Druga:</label>
+        <input type="number" id="b" name="b">
+        <button  id="b1"type="button" >+</button>
+        <button id="b2"type="button" >-</button>
+        <button id="b3"type="button" >*</button>
+        <button id="b4"type="button" >/</button>
+        <div id="div">
+
+        </div>
+    </form>
+
+    <script>
+        let b1 = document.querySelector("#b1")
+        let b2 = document.querySelector("#b2")
+        let b3 = document.querySelector("#b3")
+        let b4 = document.querySelector("#b4")
+        let d = document.querySelector("#div")
+        let e = document.createElement("h2");
+        b1.addEventListener("click",sum)
+        b2.addEventListener("click",ruz)
+        b3.addEventListener("click",mno)
+        b4.addEventListener("click",dzi)
+
+        function sum()
+        {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            e.textContent = `${a} + ${b}=${a+b}`;
+        }
+        function ruz()
+        {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            e.textContent = `${a} - ${b}=${a-b}`;
+        }
+        function mno()
+        {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            e.textContent = `${a} * ${b}=${a*b}`;
+        }
+        function dzi()
+        {   
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            e.textContent = `${a} / ${b}=${a/b}`; 
+        }
+
+        d.appendChild(e)
+    </script>
+    
+</body>
+</html>

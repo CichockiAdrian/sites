@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+	<title>T15 zad2</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+        .image {
+		width: 400px;
+		height: 400px;
+		border: 2px solid rgb(76, 0, 255);
+		
+	}
+    img{
+        width: 400px;
+		height: 400px;
+    }
+	.selected {
+        width: 400px;
+		height: 400px;
+		border: 2px solid rgb(255, 0, 0);
+
+	}
+    .selected1 {
+        width: 400px;
+		height: 400px;
+		border: 2px solid rgb(255, 225, 0);
+		
+	}
+
+	.btn, .btn1{
+        
+		
+		font-size: 20px;
+		border: none;
+		background-color: #4CAF50;
+		color: white;
+		cursor: pointer;
+
+	}
+
+	.btn:hover, .btn1:hover {
+		background-color: #3e8e41;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+        <div class="image">
+		<img class="img1" class="image" src="cher.jpg" alt="Image 1">
+		<button class="btn" onclick="changeImage1()">obrazek 1</button>
+        <button class="btn1" onclick="changeImage2()">obrazek 2</button>
+        </div>
+	</div>
+    <script>
+        let button1 = document.querySelector(".btn");
+		let button2 = document.querySelector(".btn1");
+		let image = document.querySelector(".img1");
+        let img = document.querySelector(".image")
+        function changeImage1() {
+			image.src = "boat.jpg";
+			img.className = "selected";
+			button1.innerHTML = "Dziękuję za wybór";
+            button2.innerHTML = "obrazek 2"
+		}
+		
+		function changeImage2() {
+			image.src = "cube.jpg";
+			img.className = "selected1";
+			button2.innerHTML = "Dziękuję za wybór";
+            button1.innerHTML = "obrazek 1"
+		}
+       
+    </script>
+</body>
+</html>    

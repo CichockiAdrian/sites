@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lekcja 11 cw 2a</title>
+</head>
+<body>
+<p id="output"></p>
+<script>
+    const o = document.getElementById("output")
+        const t = {
+            a: null,
+            b: null,
+            p: () => {
+                return Math.sqrt(t.a * t.a + t.b * t.b)
+            },
+            re: () => {
+                return t.a * t.b / 2
+            },
+            o: () => {
+                return t.a + t.b + Math.sqrt(t.a * t.a + t.b * t.b)
+            }
+        };
+        t.a = Number(prompt('Podaj a'));
+        t.b = Number(prompt('Podaj b'));
+
+        console.log(`Przeciwprostokątna: ${t.p()}`)
+        console.log(`Pole: ${t.re()}`)
+        console.log(`Obwód: ${t.o()}`)
+        o.innerHTML = `Przeciwprostokątna: ${t.p()}<br>`
+        o.innerHTML +=`Pole: ${t.re()}<br>`
+        o.innerHTML +=`Obwód: ${t.o()}<br>`
+
+    </script>
+</body>
+
+</html>

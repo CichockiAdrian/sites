@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_A</title>
+    <style>
+ body {
+        background-color: #327dee;
+        color: #fff;
+        font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <h1 class="class1_1">Nagłowek z klasa="class1".</h1>
+    <h2 class="class2_1">Naglowek z klasa="class2".</h2>
+    <p class="class1_1">Akapit z klasa="class1".</p>
+    <p class="class1_1">Drugi akapit z klasa="class1".</p>
+    <p id="p1">Akapit bez klasy z indentyfikatorem.</p>
+    <ul>
+        <li>punkt pierwszy</li>
+        <li>punkt drugi</li>
+        <li>punkt trzeci</li>
+        <li>punkt czwarty</li>
+    </ul>
+    <button onclick="myFunction()">Zmien kolor tla pierwzego akapitu z klasa="class1"</button>
+    <button onclick="myFunction1()">Zmien kolor tla i tekst akapitu z indentyfikatorem</button>
+    <button onclick="myFunction2()">Zmien kolor tla 2 ostatnich punktow listy</button>
+    <script>
+        function myFunction() {
+            let c1 = document.getElementsByClassName('class1_1');
+            if (c1[1].style.backgroundColor=='red') {
+                c1[1].style.backgroundColor='#327dee'
+            }
+            else{
+                c1[1].style.backgroundColor='red';
+            }
+        }
+        function myFunction1() {
+            let p1 = document.getElementById('p1');
+            if (p1.style.backgroundColor=='blue') {
+                p1.style.backgroundColor='#327dee'
+                p1.innerHTML="Akapit bez klasy z indentyfikatorem."
+            }
+            else{
+                p1.style.backgroundColor='blue';
+                p1.innerHTML="Sukces!";
+            }
+            
+        }
+        function myFunction2() {
+            let li = document.getElementsByTagName('li');
+            if (li[2].style.backgroundColor!="red") {
+                li[3].style.backgroundColor="red";
+                li[2].style.backgroundColor="red";
+            }
+            else{
+                li[3].style.backgroundColor="";
+                li[2].style.backgroundColor="";
+            }
+            
+        }
+    </script>
+</body>
+</html>

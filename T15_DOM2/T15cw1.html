@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>T15 zad1</title>
+	<style>
+        div{
+            display: flex;
+            justify-content: auto;
+        }
+		.class1 {
+            align-items:center ;
+            justify-content: center;
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			color: white;
+			text-align: center;
+			padding-top: 80px;
+			font-size: 20px;
+		}
+        #div1{
+            align-items: center;
+            justify-content: center;
+            margin: 10%;
+            width: 200px;
+			height: 200px;
+			color: rgb(128, 65, 65);
+			text-align: center;
+			padding-top: 80px;
+			font-size: 20px;
+            
+        }
+	</style>
+</head>
+<body>
+	<div id="div">
+		<img id="img" src="monk.jpg" alt="małpka">
+        <div id="div1">Spójrz na mnie!</div>
+		<br>
+		<a id="link" href="https://www.google.com"><b>link</b></a>
+	</div>
+
+	<button onclick="addCustomClass()">Dodaj klasę</button>
+	<button onclick="addDimensions()">Dodaj wymiary</button>
+	<button onclick="changeLink()">Zmień link</button>
+
+	<script>
+		function addCustomClass() {
+			let Div = document.querySelector("#div1");
+			Div.classList.add("class1");
+			Div.innerHTML = "Małpka Szymlin";
+		}
+
+		function addDimensions() {
+			let Img = document.querySelector("#img");
+			Img.style.width = "300px";
+			Img.style.height = "300px";
+		}
+
+		function changeLink() {
+			let Link = document.querySelector("#link");
+			Link.href = "https://www.facebook.com";
+		}
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 5 zad 5a</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Podaj liczbe");
+        let num1 = parseFloat(a);
+        var x = prompt("Podaj znak działania");
+        var b = prompt("Podaj drugą liczbe");
+        let num2 = parseFloat(b);
+        
+        if(x=="+"){
+            alert(a+" + "+b+" = "+(num1+num2))
+        }else if(x=="*"){
+            alert(a+" * "+b+" = "+(num1*num2))
+        }else if(x=="/"){
+            alert(a+" / "+b+" = "+(num1/num2))
+        }else if(x=="-"){
+            alert(a+" - "+b+" = "+(num1-num2))
+        }
+    </script>
+</body>
+</html>

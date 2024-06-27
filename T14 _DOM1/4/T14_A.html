@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_A</title>
+   
+</head>
+
+<body>
+    <p class="nparz topy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget
+        sem fringilla fringilla.</p>
+    <p class="parz topy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem
+        fringilla fringilla.</p>
+    <p class="nparz topy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget
+        sem fringilla fringilla.</p>
+    <p class="parz">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem
+        fringilla fringilla.</p>
+    <p class="nparz">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget sem
+        fringilla fringilla.</p>
+    <p class="parz" id="ost1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet libero eget
+        sem fringilla fringilla.</p>
+    <button onclick="myFunction()">Formatuj parzyste</button>
+    <button onclick="myFunction1()">Formatuj nieparzyste</button>
+    <button onclick="myFunction2()">Formatuj 3 pierwsze</button>
+    <button onclick="myFunction3()">Formatuj ostatni akapit</button>
+    <script>
+        let par = document.getElementsByClassName("parz");
+        let npar = document.getElementsByClassName("nparz");
+        let top3 = document.getElementsByClassName("topy");
+        let ost = document.getElementById("ost1");
+        function myFunction(){
+            if (par[0].style.backgroundColor != 'gray') {
+                for (const x of par) {
+                    x.style.backgroundColor = 'gray';
+                    x.style.color = 'red';
+                    x.style.textAlign = 'right';
+                    x.style.fontFamily = "New Years Times";
+                }
+            } else {
+                for (const x of par) {
+                    x.style.backgroundColor = 'white';
+                    x.style.color = 'black';
+                    x.style.textAlign = 'left';
+                    x.style.fontFamily = "Arial";
+                }
+            }
+        }
+        function myFunction1(){
+            if (npar[0].style.backgroundColor != 'yellow') {
+                for (const x of npar) {
+                    x.style.backgroundColor = 'yellow';
+                    x.style.color = 'black';
+                    x.style.textAlign = 'center';
+                    x.style.fontFamily = "OCR A Std Black";
+                }
+            } else {
+                for (const x of npar) {
+                    x.style.backgroundColor = 'white';
+                    x.style.color = 'black';
+                    x.style.textAlign = 'left';
+                    x.style.fontFamily = "Arial";
+                }
+            }
+        }
+        function myFunction2(){
+            if (top3[0].style.backgroundColor != 'yellow') {
+                for (const x of top3) {
+                    x.style.backgroundColor = 'yellow';
+                    x.style.color = 'red';
+                    x.style.textAlign = 'right';
+                    x.style.fontFamily = "OCR A Std";
+                }
+            }
+            else {
+                for (const x of top3) {
+                    x.style.backgroundColor = 'white';
+                    x.style.color = 'black';
+                    x.style.textAlign = 'left';
+                    x.style.fontFamily = "Arial";
+                }
+            }
+
+        }
+        function myFunction3(){
+            if (ost.style.backgroundColor != 'salteblue') {
+                ost.style.backgroundColor = 'salteblue';
+                ost.style.color = 'blue';
+                ost.style.textAlign = 'center';
+                ost.style.fontFamily = "OCR A Std";
+                ost.innerHTML = ost.innerText.toUpperCase();
+                ost.style.letterSpacing = '15px';
+            } else {
+                ost.style.backgroundColor = 'white';
+                ost.style.color = 'black';
+                ost.style.textAlign = 'left';
+                ost.style.fontFamily = "Arial";
+                ost.innerHTML = ost.innerText.toLowerCase();
+                ost.style.letterSpacing = '0px';
+
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

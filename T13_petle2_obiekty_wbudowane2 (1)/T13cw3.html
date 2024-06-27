@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T13_cw3</title>
+    <style>
+    </style>
+</head>
+<body>
+    
+    <ul id="listka">
+
+    </ul>
+    <ol id="listka2">
+    </ol>
+   
+    <script>
+        l = document.getElementById("listka")
+        l2 = document.getElementById("listka2")
+    const t=["Niggas in Paris","Sicario","Drugs in AM","Pani W."]
+        for(i in t){
+            l.innerHTML += `<li> ${t[i]}</li>`;
+        }
+        
+        t.forEach(element => {
+        l2.innerHTML += `<li>${element}</li>`;
+     });
+    </script>
+    </script>
+</body>
+</html>

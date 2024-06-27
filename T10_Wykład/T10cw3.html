@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const Osoba ={
+        imie: "Jan",
+        nazwisko: "Nowak",
+        data_urodzenia: "19.08.2004"
+    }
+    Osoba.adres_zamieszkania = new Object ({
+        ulica: "Zamkowa",
+        nr_domu: 17,
+        nr_mieszkania: 32,
+        kod_pocztowy: "62-432",
+        miejscowość: "Poznań"
+    })
+    document.querySelector("body").innerHTML = (`${Osoba.imie}, ${Osoba.nazwisko}, ${Osoba.data_urodzenia}, ${Osoba.adres_zamieszkania.ulica}, ${Osoba.adres_zamieszkania.nr_domu}, ${Osoba.adres_zamieszkania.nr_mieszkania}, ${Osoba.adres_zamieszkania.kod_pocztowy}, ${Osoba.adres_zamieszkania.miejscowość}`)
+    console.log(Osoba)
+</script>
+</html>

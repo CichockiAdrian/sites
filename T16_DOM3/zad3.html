@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabliczka mnożenia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        form {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        button {
+  		background-color: #4CAF50;
+  		border: none;
+  		color: white;
+  		padding: 12px 24px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 16px;
+  		margin: 4px 2px;
+  		cursor: pointer;
+  		border-radius: 4px;
+		}
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        #container {
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabliczka mnożenia</h1>
+    <form>
+        <label for="a">Podaj poczatek:</label>
+        <input type="number" id="a" name="a">
+        <label for="b">zakonczenie:</label>
+        <input type="number" id="b" name="b">
+        <button type="button" onclick="newtable()">Utwórz</button>
+    </form>
+    <div id="container"></div>
+    <h2></h2>
+    <h3></h3>
+
+    <script>
+        function newtable() {
+			document.querySelector("h3").innerHTML = "";
+			document.getElementById("container").innerHTML = "";
+            const a = parseInt(document.getElementById("a").value);
+            const b = parseInt(document.getElementById("b").value);
+            const e = document.querySelector("h2");
+            const h = document.querySelector("h3");
+
+            e.textContent = `a = ${a},  b = ${b}`;
+
+            if (a > b) {
+                h.textContent = "Pierwsza wartosc musi być mniejsza od drugiej";
+                return;
+            }
+            if (isNaN(a) || isNaN(b)) {
+                h.textContent = "ŹLE, niepoprawna wartość!!!!";
+                return;
+				
+            }
+
+            const table = document.createElement("table");
+            const thead = document.createElement("thead");
+            const tbody = document.createElement("tbody");
+
+			const rows = document.createElement("tr");
+			const column = document.createElement("th");
+			rows.appendChild(column);
+
+			for (let i = a; i <= b; i++) {
+				const cell = document.createElement("th");
+				cell.textContent = i;
+				rows.appendChild(cell);
+			}
+			thead.appendChild(rows);
+
+			for (let i = a; i <= b; i++) {
+				const row = document.createElement("tr");
+				const column = document.createElement("th");
+				column.textContent = i;
+				row.appendChild(column);
+				for (let j = a; j <= b; j++) {
+					const cell = document.createElement("td");
+					cell.textContent = i * j;
+					row.appendChild(cell);
+				}
+				tbody.appendChild(row);
+			}
+
+			table.appendChild(thead);
+			table.appendChild(tbody);
+			document.getElementById("container").appendChild(table);
+		}
+	</script>
+</body>
+</html>

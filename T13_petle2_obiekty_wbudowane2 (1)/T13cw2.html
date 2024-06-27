@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T13_cw2</title>
+    <style>
+        table, td, tr{
+            border: 1px solid red;
+            
+        }
+        *{
+            color:white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <table id="tabelka" cellspacing=0>
+    </table>
+    <script>  
+    l = document.getElementById("tabelka");
+     const n = {
+        napis:"Nowy rok!"
+     }
+
+   for(let i in n.napis){
+       console.log(n.napis[i]);
+        l.innerHTML += `<td>${n.napis[i]}</td>`;
+        
+     }
+    
+    </script>
+</body>
+</html>

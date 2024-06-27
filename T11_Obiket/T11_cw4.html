@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lekcja 11 cw 4</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(fname, lname, age) {
+                this.fname = fname
+                this.lname = lname
+                this.age = age
+            }
+        }
+        class Zepsute_Społeczeństwo_Komputerowe {
+            constructor(subject, classs) {
+                this.teacher = p.fname + " " + p.lname
+                this.subject = subject
+                this.classs = classs
+                this.student = u.fname + " "+ u.lname
+            }
+        }
+        const p = new Person('Krzysztof', 'Kononowicz', 51)
+        const u = new Person('Maruś', 'Makieta', 11)
+        const s = new Zepsute_Społeczeństwo_Komputerowe('betoniarstwo', '5',)
+        console.log(p)
+        console.log(s);
+        console.log(`Nauczyciel ${s.teacher}  uczy przedmiotu ${s.subject}.`)
+        console.log(`Uczeń ${s.student}  chodzi do klasy ${s.classs}  , której wychowawcą jest ${s.teacher}.`)
+    </script>
+</body>
+
+</html>

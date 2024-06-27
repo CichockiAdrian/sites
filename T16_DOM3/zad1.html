@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T16 zad 1</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        div {
+            display: grid;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .link1 {
+            color: #007bff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .link1:hover {
+            color: #0056b3;
+        }
+
+        .link2 {
+            color: #dc3545;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .link2:hover {
+            color: #c82333;
+        }
+
+        .img1 {
+            border: 2px solid #d2d2d2;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick=function1()>Zobacz!</button>
+    <script>
+        function function1() {
+            let d = document.createElement("h1");
+            d.textContent = "Polecane strony";
+
+            let i = document.createElement("img");
+            i.setAttribute("src", "doberman.jpg");
+            i.setAttribute("class", "img1");
+
+            let append = document.querySelector("div");
+
+            let link = document.createElement("a");
+            link.setAttribute("href", "https://www.doberman.org/");
+            link.textContent = "Polecane";
+            link.setAttribute("class", "link1");
+
+            let link2 = document.createElement("a");
+            link2.setAttribute("href", "https://www.akc.org/dog-breeds/doberman-pinscher/");
+            link2.textContent = "Inni wybrali równiez";
+            link2.setAttribute("class", "link2");
+
+            append.appendChild(d);
+            append.appendChild(i);
+            append.appendChild(link);
+            append.appendChild(link2);
+        }
+    </script>
+</body>
+</html>

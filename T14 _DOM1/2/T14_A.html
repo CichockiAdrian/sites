@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T14_2A</title>
+    <style>
+        body{
+        background-color: #327dee;
+        color: #fff;
+        font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">Jeden</a></li>
+        <li><a href="">Dwa</a></li>
+        <li><a href="">Trzy</a></li>
+        <li><a href="">Cztery</a></li>
+        <li><a href="">Pięć</a></li>
+    </ul>
+    <button onclick="myFunction()">Ukryj menu</button>
+    <button onclick="myFunction1()">Pokaz menu</button>
+    <script>
+        let hidden = document.getElementsByTagName("li");
+        function myFunction() {
+            for (let i of hidden){
+            i.style.visibility = "hidden";
+            i.style.height = "0";
+            }
+        }
+        function myFunction1() {
+            for (let i of hidden){
+                i.style.visibility = "visible";
+                i.style.height = "auto";
+            }
+        }
+    </script>
+</body>
+</html>

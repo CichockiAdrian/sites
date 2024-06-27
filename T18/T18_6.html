@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T18 zad 6</title>
+    <style>
+        body {
+            display: column;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+        h1{
+            margin-left: 35%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oblicz ilość litrów paliwa</h1>
+
+    <form>
+        <label for="distance">Dystans do przejechania (km):
+            <input type="number" id="distance">
+        </label>
+
+        <label for="consumption">Spalanie (l/100km):
+            <input type="number" id="consumption">
+        </label>
+
+        <button type="button" id="calculate-btn">Oblicz</button>
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+        let calculateBtn = document.querySelector('#calculate-btn');
+        let distanceInput = document.querySelector('#distance');
+        let consumptionInput = document.querySelector('#consumption');
+        let resultParagraph = document.querySelector('#result');
+
+        calculateBtn.addEventListener('click', () => {
+            let distance = distanceInput.value;
+            let consumption = consumptionInput.value;
+
+            let litersNeeded = distance * consumption / 100;
+
+            resultParagraph.textContent = `Musisz zatankować ${litersNeeded.toFixed(2)} litrów paliwa.`;
+        });
+    </script>
+</body>
+</html>

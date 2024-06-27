@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T18 zad 4</title>
+    <style>
+        *{margin: 5px;}
+        button{
+            height:50px;
+            height:50px;
+            margin: 5px;
+        }
+        #btn1{
+            background-color: red;
+        }
+        #btn2{
+            background-color: green;
+        }
+        #btn3{
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <label for="a">Podaj rozmiar tekstu w procentach:
+        <input type="number" name="a" id="a">
+    </label><br>
+    <select class="s">
+        <option value ="1">prosta</option>
+        <option value = "2">pochyła</option>
+    </select><br>
+
+    Jakim kolorem sformatować tekst?<br>
+    <button id="btn1"></button>
+    <button id="btn2"></button>
+    <button id="btn3"></button>
+
+    <p id="paragraf">To jest przyklad paragrafy, który moze byc dowolnie formatowany przez JavaScript</p>
+
+    <script>
+        let select = document.querySelector(".s")
+        let a = document.querySelector("#a")
+        let btn1 = document.querySelector("#btn1")
+        let btn2 = document.querySelector("#btn2")
+        let btn3 = document.querySelector("#btn3")
+        let p = document.querySelector("#paragraf")
+        
+        
+        btn1.addEventListener("click",function(){
+            p.style.fontSize = `${a.value}%`
+            p.style.color = "red"
+            if(select.value == "2"){
+                p.style.fontStyle = "italic"
+            }else{
+                p.style.fontStyle = "normal"
+            }
+        })
+
+        btn2.addEventListener("click",function(){
+            p.style.fontSize = `${a.value}%`
+            p.style.color = "green"
+            if(select.value == "2"){
+                p.style.fontStyle = "italic"
+            }else{
+                p.style.fontStyle = "normal"
+            }
+        })
+
+        btn3.addEventListener("click",function(){
+            p.style.fontSize = `${a.value}%`
+            p.style.color = "blue"
+            if(select.value == "2"){
+                p.style.fontStyle = "italic"
+            }else{
+                p.style.fontStyle = "normal"
+            }
+        })
+    </script>
+</body>
+</html>

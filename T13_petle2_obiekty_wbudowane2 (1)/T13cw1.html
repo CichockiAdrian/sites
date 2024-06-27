@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T13_cw1</title>
+</head>
+<body>
+    <ol id="lista">
+
+    </ol>
+    <script>
+        l = document.getElementById("lista");
+     const ferie = {
+        adres:"Szkolna 2, Bydgoszcz",
+        data:"20.02.2023",
+        dni: 12,
+        koszt: 1400,
+        
+     }
+     for(let i in ferie){
+        l.innerHTML += `<li><b>${i}</b> ${ferie[i]}</li>`;
+       
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 5 zad 4</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Podaj pierwszą liczbę:");
+        let a = parseFloat(x);
+        var y = prompt("Podaj drugą liczbę:");
+        let b = parseFloat(y);
+        var z = prompt("Podaj trzecią liczbę:");
+        let c = parseFloat(z);
+
+        if(a>b&&b>c&&a>c){
+            alert("Liczby w kolejnosci rosnącej: " + c + ", " +b+", " +a)
+        }else if (a>b&&c>b&&a>c) {
+            alert("Liczby w kolejnosci rosnącej: " + b + ", " +c+", " +a)
+        }else if(b>a&&a>c&&b>c){
+            alert("Liczby w kolejnosci rosnącej: " + c + ", " +a+", " +b)
+        }else if(b>a&&c>a&&b>c){
+            alert("Liczby w kolejnosci rosnącej: " + a + ", " +c+", " +b)
+        }else if(c>a&&a>b&&c>b){
+            alert("Liczby w kolejnosci rosnącej: " + b + ", " +a+", " +c)
+        }else if(c>a&&b>a&&c>b){
+            alert("Liczby w kolejnosci rosnącej: " + b + ", " +a+", " +c)
+        }
+    </script>
+</body>
+</html>
