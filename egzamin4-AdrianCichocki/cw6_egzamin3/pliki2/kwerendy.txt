@@ -1,0 +1,13 @@
+1.
+Select * from pogoda p where p.miasta_id=1 order by 3 asc
+
+2.
+select id, data_prognozy from pogoda p where p.opady>30
+
+3.
+Select data_prognozy, temperatura_noc, nazwa from pogoda p
+inner join miasta on p.miasta_id=miasta.id
+where temperatura_noc<6
+
+4.
+Alter table miasta add column wojewodztwo TEXT

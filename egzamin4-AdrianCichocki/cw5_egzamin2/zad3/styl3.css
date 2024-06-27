@@ -1,0 +1,68 @@
+body{
+    font-family: Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+header{
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+
+main{
+     height: 500px;
+    background-color: seashell;
+    overflow: scroll;
+}
+
+div{
+    background-color: tomato;
+    color: white;
+    width: 25%;
+    height: 160px;
+}
+
+
+.kl_op{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px 5px dimgray;
+}
+
+img{
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+    /* dodane tylko z powodu problemu z plikiem ewa który został poprawnie przeskalowany lecz brak efektów */
+}
+
+p{
+    padding: 10px;
+    font-size: 150%;
+    font-style: italic;
+}
+h1{
+    text-align: center;
+}
+h4{
+    text-align: right;
+    margin-right: 40px;
+    font-size: 150%;
+    font-style: italic;
+}
+a{
+    color: white;
+}
+footer{
+    display: flex;
+}
+h2{
+    text-align: center;
+}
